@@ -2,10 +2,10 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 # Light stimuli duration
-t_max = 30; # minutes
+t_max = 60; # minutes
 
 # Update period of PWM
-periodo = 1 # each second
+periodo = 0.1 # each second
 
 # time vector definition
 t = np.arange(0,t_max,(periodo/60))
@@ -15,7 +15,7 @@ res = 4; # 12 bits resolution
 amp_max = 2**res -1
 
 # Duration of stimuli
-on_off = np.array([4,9,14,17,22,23])+0.25;
+on_off = np.array([4,9,14,17,22,23])*2+0.25;
 
 mascara = np.zeros((1,len(t)));
 pendientes = np.zeros((1,len(t)));
@@ -31,7 +31,7 @@ for i in range(len(on_off)):
 
 
 # Sinus signal
-frec = 0.05 # Sinus frequency
+frec = 0.01 # Sinus frequency
 sen = np.sin(2*np.pi*frec*t*60)
 senoidal = np.floor( amp_max*(sen + 1)/2 )*mascara
 
