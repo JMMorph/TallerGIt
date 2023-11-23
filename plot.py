@@ -1,6 +1,8 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
+nueva = 0
+
 # Light stimuli duration
 t_max = 60; # minutes
 
