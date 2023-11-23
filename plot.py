@@ -65,4 +65,5 @@ plt.grid('on')
 plt.axis([0, t_max, 0, amp_max+amp_max*0.1])
 plt.savefig('plots.png',dpi=300)
 plt.show()
+print("se añade algo para ver la feature")
 
